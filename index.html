@@ -1,0 +1,23 @@
+
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Marked in the browser</title>
+</head>
+<body>
+  <div id="content">
+
+    Here is some example **formatting** in _Markdown_.
+        
+    The following JavaScript will transform this content to clean HTML.
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+      var htmldata = document.getElementById("content").innerText;
+    document.getElementById('content').innerHTML =
+      marked(htmldata);
+  </script>
+</body>
+</html>
